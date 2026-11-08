@@ -1,0 +1,21 @@
+{
+  "timezone": "Europe/Paris",
+  "send_hour": 10,
+  "window_hours": 24,
+  "max_events": 12,
+  "max_single": 6,
+  "min_sources_confirmed": 2,
+  "boost_keywords": ["AI", "artificial intelligence", "France", "Europe", "人工智能", "法国", "欧洲"],
+  "feeds": [
+    {"name": "BBC", "url": "http://feeds.bbci.co.uk/news/world/rss.xml"},
+    {"name": "Guardian", "url": "https://www.theguardian.com/world/rss"},
+    {"name": "Al Jazeera", "url": "https://www.aljazeera.com/xml/rss/all.xml"},
+    {"name": "NPR", "url": "https://feeds.npr.org/1004/rss.xml"},
+    {"name": "DW", "url": "https://rss.dw.com/rdf/rss-en-world"},
+    {"name": "France 24", "url": "https://www.france24.com/en/rss"},
+    {"name": "CNA", "url": "https://www.channelnewsasia.com/api/v1/rss-outbound-feed?_format=xml&category=6511"},
+    {"name": "BBC中文", "url": "https://feeds.bbci.co.uk/zhongwen/simp/rss.xml"},
+    {"name": "德国之声中文", "url": "https://rss.dw.com/rdf/rss-chi-all"},
+    {"name": "纽约时报中文", "url": "https://cn.nytimes.com/rss/"}
+  ]
+}
