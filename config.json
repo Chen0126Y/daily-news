@@ -1,11 +1,11 @@
 {
-  "timezone": "Europe/Paris",
-  "send_hour": 10,
+  "timezone": "Asia/Shanghai",
+  "send_hour": 9,
   "window_hours": 24,
   "max_events": 12,
   "max_single": 6,
   "min_sources_confirmed": 2,
-  "boost_keywords": ["AI", "artificial intelligence", "France", "Europe", "人工智能", "法国", "欧洲"],
+  "boost_keywords": [],
   "feeds": [
     {"name": "BBC", "url": "http://feeds.bbci.co.uk/news/world/rss.xml"},
     {"name": "Guardian", "url": "https://www.theguardian.com/world/rss"},
