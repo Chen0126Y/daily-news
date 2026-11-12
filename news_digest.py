@@ -133,13 +133,15 @@ def render(confirmed, single, now_local, failed, hours):
 
 
 def send(subject, body):
-    user, pwd, to = os.environ["GMAIL_USER"], os.environ["GMAIL_APP_PASSWORD"], os.environ.get("TO_EMAIL") or os.environ["GMAIL_USER"]
+    user, pwd = os.environ["GMAIL_USER"], os.environ["GMAIL_APP_PASSWORD"]
+    raw = os.environ.get("TO_EMAIL") or user
+    to_list = [a.strip() for a in re.split(r"[,;，；\s]+", raw) if a.strip()]
     msg = MIMEMultipart("alternative")
-    msg["Subject"], msg["From"], msg["To"] = subject, user, to
+    msg["Subject"], msg["From"], msg["To"] = subject, user, user
     msg.attach(MIMEText(body, "html", "utf-8"))
     with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=ssl.create_default_context()) as s:
         s.login(user, pwd)
-        s.sendmail(user, [to], msg.as_string())
+        s.sendmail(user, to_list, msg.as_string())
 
 
 def main(argv):
